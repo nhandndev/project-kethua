@@ -9,10 +9,20 @@ import java.util.List;
 /**
  * Manager class for Member operations in the library management system.
  */
-public class MemberManager extends BaseManager<Member> {
+public class MemberManager {
+
+    private List<Member> items;
 
     public MemberManager() {
-        super();
+        this.items = new ArrayList<>();
+    }
+
+    public List<Member> getAll() {
+        return this.items;
+    }
+
+    private void addLoadedItem(Member item) {
+        this.items.add(item);
     }
 
     public Member getMemberById(String id) {

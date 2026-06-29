@@ -26,13 +26,22 @@ import java.util.List;
  * - BR8: Updates book stock and member borrow counts
  * - BR9: Validates all inputs before processing
  */
-public class BorrowManager extends BaseManager<BorrowRecord> {
+public class BorrowManager {
 
+    private List<BorrowRecord> items;
     private BookManager bookManager = new BookManager();
     private MemberManager memberManager = new MemberManager();
 
     public BorrowManager() {
-        super();
+        this.items = new ArrayList<>();
+    }
+
+    public List<BorrowRecord> getAll() {
+        return this.items;
+    }
+
+    private void addLoadedItem(BorrowRecord item) {
+        this.items.add(item);
     }
 
     public BookManager getBookManager() {

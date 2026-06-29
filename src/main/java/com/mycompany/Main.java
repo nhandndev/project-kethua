@@ -1,8 +1,6 @@
 package com.mycompany;
 
-import com.mycompany.entity.Book;
-import com.mycompany.entity.Member;
-import com.mycompany.entity.BorrowRecord;
+import com.mycompany.entity.*;
 import com.mycompany.manager.BookManager;
 import com.mycompany.manager.MemberManager;
 import com.mycompany.manager.BorrowManager;
@@ -141,13 +139,13 @@ public class Main {
             double weight = Double.parseDouble(sc.nextLine().trim());
             System.out.print("Shelf Location: ");
             String location = sc.nextLine().trim();
-            newBook = new com.mycompany.entity.PhysicalBook(id, title, author, genre, year, quantity, weight, location);
+            newBook = new PhysicalBook(id, title, author, genre, year, quantity, weight, location);
         } else {
             System.out.print("File Size (MB): ");
             double size = Double.parseDouble(sc.nextLine().trim());
             System.out.print("Format (PDF/EPUB): ");
             String format = sc.nextLine().trim();
-            newBook = new com.mycompany.entity.Ebook(id, title, author, genre, year, size, format);
+            newBook = new Ebook(id, title, author, genre, year, size, format);
         }
 
         System.out.println("[1] Save [2] Cancel");
