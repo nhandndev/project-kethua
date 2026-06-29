@@ -11,16 +11,16 @@ package com.mycompany.entity;
  */
 public abstract class Book {
     // BR1: Each Book ID must be unique and cannot be modified
-    protected String id;
+    private String id;
     // BR2: Book title, author, and genre must not be empty
-    protected String title;
-    protected String author;
-    protected String genre;
-    protected int year;
+    private String title;
+    private String author;
+    private String genre;
+    private int year;
     // BR8: Book stock is reduced upon borrowing and increased upon returning
-    protected int quantity;
+    private int quantity;
     // BR10: Track the total number of times a book has been borrowed to determine popularity
-    protected int borrowCount;
+    private int borrowCount;
 
     public Book(String id, String title, String author, String genre, int year, int quantity) {
         this.id = id;

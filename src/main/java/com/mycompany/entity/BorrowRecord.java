@@ -12,13 +12,13 @@ package com.mycompany.entity;
  */
 public abstract class BorrowRecord {
     // BR3: Identifies the member borrowing the book
-    protected String memberId;
+    private String memberId;
     // BR3: Identifies the book being borrowed
-    protected String bookId;
+    private String bookId;
     // BR6: Records the date when the book was borrowed (must be current or in the past)
-    protected String borrowDate;
+    private String borrowDate;
     // BR6: Tracks whether the book has been returned (return date must be after borrow date)
-    protected boolean isReturned;
+    private boolean isReturned;
 
     public BorrowRecord(String memberId, String bookId, String borrowDate) {
         this.memberId = memberId;
